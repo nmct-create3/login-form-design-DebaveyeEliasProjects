@@ -1,6 +1,18 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
+    font-weight: 500;
+}
+
 
 /*------------------------------------*\
 #Variables
@@ -31,6 +43,9 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: white;
+    color: #20223a;
+    background-color: #F5F6FA;
+    font-family: "Inter";
 }
 
 *,
@@ -47,13 +62,13 @@ html {
 */
 
 ::-moz-selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -158,20 +173,27 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF ;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #1b3d70 ;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #1b3d70 ;
 }
 
+
+input{
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 /*------------------------------------*\
 #OBJECTS
 \*------------------------------------*/
@@ -432,6 +454,33 @@ a:focus {
     Website main logo
 */
 
+.c-logo{
+
+    height: 24px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.c-logo__symbol{
+
+    height: 100%;
+    
+
+}
+
+.c-logo__symbol-1{
+    fill:#20223A;
+}
+
+.c-logo__symbol-2{
+    fill: #3385FF;  
+}
+
+.c-logo__symbol-3{
+    fill:#1B4186;
+}
+
 /*
     Component: Card
     ---
@@ -444,6 +493,16 @@ a:focus {
     Everything form related here
 */
 
+.c-form-field{
+    
+
+}
+
+.c-form-field--option{
+    display: flex;
+    align-items: center;
+}
+
 /*
     Component: Input
     ---
@@ -451,7 +510,14 @@ a:focus {
 */
 
 .c-input {
-
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    font-family: "Inter";
+    color: #20223a;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px;
 }
 
 .c-input:focus {
@@ -469,6 +535,8 @@ a:focus {
 
 /* If a input is focused within the form-field class change te color of the label */
 
+
+
 .c-form-field:focus-within .c-label {
 
 }
@@ -478,6 +546,7 @@ a:focus {
     ---
     Class to put on form buttons or links
 */
+
 
 .c-button {
 
