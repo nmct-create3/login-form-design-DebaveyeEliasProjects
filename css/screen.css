@@ -15,11 +15,31 @@
 
 
 /*------------------------------------*\
-#Variables
+variables
 \*------------------------------------*/
 
 :root {
+    --global-color-alpha-light: #4F95FF;
+    --global-color-alpha: #3385FF;
+    --global-color-alpha-dark: #2E77E6;
 
+    --global-color-alpha-light: #4F95FF;
+    --global-color-alpha: #3385FF;
+    --global-color-alpha-dark: #2E77E6;
+    --global-color-transparent:  #3385ff4d  ;
+    --global-color-x-transparent: #ff333347;
+
+    --global-color-neutral-xxxx-light: #E2E3E7;
+    --global-color-neutral-xxx-light: #CACCD4; 
+    --global-color-neutral-xx-light: #E2E3E7;
+    --global-color-neutral-x-light: #B5B6C0;
+    --global-color-neutral-light: #A0A1AD;
+    --global-color-neutral: #8B8C9A;
+    --global-color-neutral-dark: #757787;
+    --global-color-neutral-x-dark: #606274;
+    --global-color-neutral-xx-dark: #4B4C60;
+    --global-color-neutral-xxx-dark: #35374D;
+    --global-color-neutral-xxxx-dark: #20223A;
 }
 
 /* CSS variables here */
@@ -43,7 +63,7 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: white;
-    color: #20223a;
+    color: var(--global-color-neutral-xxxx-dark);
     background-color: #F5F6FA;
     font-family: "Inter";
 }
@@ -179,12 +199,12 @@ a {
 
 a:visited,
 a:active {
-    color: #1b3d70 ;
+    color: var(--global-color-alpha);
 }
 
 a:hover,
 a:focus {
-    color: #1b3d70 ;
+    color: var(--global-color-alpha-light);
 }
 
 
@@ -470,7 +490,7 @@ input{
 }
 
 .c-logo__symbol-1{
-    fill:#20223A;
+    fill:var(--global-color-neutral-xxxx-dark);
 }
 
 .c-logo__symbol-2{
@@ -516,7 +536,7 @@ input{
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    border-top: 1px solid #E2E3E7;
+    border-top: 1px solid var(--global-color-neutral-xxxx-light);
 
 }
 
@@ -564,9 +584,9 @@ input{
 .c-input {
     width: 100%;
     border-radius: 3px;
-    border: 1px solid #E2E3E7;
+    border: 1px solid var(--global-color-neutral-xxxx-light);
     font-family: "Inter";
-    color: #20223a;
+    color: var(--global-color-neutral-xxxx-dark);
     font-size: 16px;
     line-height: 24px;
     padding: 12px;
@@ -592,7 +612,7 @@ input{
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 18px;
-    color: #606274;
+    color: var(--global-color-neutral-x-dark);
 }
 
 .c-form-field--option .c-label{
@@ -692,7 +712,7 @@ input{
 }
 
 .u-gray__text{
-    color: #757787;
+    color: var(--global-color-neutral-dark);
 }
 
 
@@ -769,6 +789,10 @@ input{
 
 .u-align-center {
     margin: 0 auto;
+}
+
+.u-lighter__text{
+    color: var(--global-color-neutral-x-dark)
 }
 
 /*
