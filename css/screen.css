@@ -190,9 +190,7 @@ a:focus {
 
 input{
     display: block;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    
 }
 /*------------------------------------*\
 #OBJECTS
@@ -210,7 +208,9 @@ input{
 }
 
 .o-row--login {
-    /* stuff here to align the card */
+    display:flex;
+    align-items: center;
+    height: 100vh;
 }
 
 /* size modifiers */
@@ -487,6 +487,58 @@ input{
     Card with box shadow
 */
 
+.c-card{
+    background-color: white;
+    border-radius: 3px;
+}
+
+.c-card__body{
+
+    padding: 12px 48px; 
+
+}
+
+.c-card__title{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 48px;
+    margin-top: 56px;
+
+}
+
+.c-card__footer{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border-top: 1px solid #E2E3E7;
+
+}
+
+.c-card__footer p {
+    margin:24px 12px;
+}
+
+@media(max-width:530px){
+
+    .c-card__body{
+        padding: 6px 24px;
+        font-size: 14px;
+    
+    }
+    .c-card__title{
+        font-size: 16px;
+    }
+
+
+
+}
+
 /*
     Component: Forms
     ---
@@ -512,15 +564,22 @@ input{
 .c-input {
     width: 100%;
     border-radius: 3px;
-    border: 1px solid lightgray;
+    border: 1px solid #E2E3E7;
     font-family: "Inter";
     color: #20223a;
     font-size: 16px;
     line-height: 24px;
     padding: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .c-input:focus {
+    outline: none;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 0 3px #3385ff4d; 
+    border: 1px solid #3385FF;
 }
 
 /*
@@ -530,6 +589,16 @@ input{
 */
 
 .c-label {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 18px;
+    color: #606274;
+}
+
+.c-form-field--option .c-label{
+
+    margin-bottom: 0;
+    margin-left: 8px;
 
 }
 
@@ -549,19 +618,39 @@ input{
 
 
 .c-button {
-
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #2E77E6;
+    font-family: "Inter";
+    background-color: #3385FF;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px;
+    outline: none;
+    font-weight: 500;
 }
 
 .c-button:hover {
-
+    background-color: #4F95FF;
+    border: 1px solid #2E77E6;
+    outline: none;
 }
 
 .c-button:focus {
-
+    
+    background-color: #3385FF;
+    border: 1px solid #2E77E6;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 0 3px #3385ff4d; 
+    outline: none;
 }
 
 .c-button:active {
-
+    background-color:#2E77E6;
+    border: 1px solid #2E77E6;
+    outline: none;
+    
 }
 
 .c-button--block {
@@ -591,6 +680,27 @@ input{
     ---
     Utility classes to put specific margins and paddings onto elements
 */
+
+
+.u-margin__bottom-lg{
+    margin-bottom: 36px !important;
+
+}
+
+.u-smaller_text{
+    font-size: 14px;
+}
+
+.u-gray__text{
+    color: #757787;
+}
+
+
+.u-align--center{
+    display: flex;
+    justify-content: center;
+
+}
 
 .u-pt-clear {
     padding-top: 0 !important;
