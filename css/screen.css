@@ -19,9 +19,6 @@ variables
 \*------------------------------------*/
 
 :root {
-    --global-color-alpha-light: #4F95FF;
-    --global-color-alpha: #3385FF;
-    --global-color-alpha-dark: #2E77E6;
 
     --global-color-alpha-light: #4F95FF;
     --global-color-alpha: #3385FF;
@@ -40,6 +37,14 @@ variables
     --global-color-neutral-xx-dark: #4B4C60;
     --global-color-neutral-xxx-dark: #35374D;
     --global-color-neutral-xxxx-dark: #20223A;
+
+    --global-baseline: 8px; 
+    --global-whitespace-xs: calc(var( --global-baseline) / 2); /* = 4px */
+    --global-whitespace-sm: calc(var( --global-baseline) / 1); /* = 8px */
+    --global-whitespace-md: calc(var( --global-baseline) *2); /* = 16px */
+    --global-whitespace-lg: calc(var( --global-baseline) * 4); /* = 32px */   
+    --global-whitespace-xl: calc(var(--global-whitespace-md) * 3); /* = 48px */    
+    --global-whitespace-xxl: calc(var(--global-whitespace-md) * 4); /* = 64px */    
 }
 
 /* CSS variables here */
@@ -55,7 +60,7 @@ variables
 */
 
 html {
-    font-size: 16px;
+    font-size: var(--global-whitespace-md);
     line-height: 1.5;
     font-family: Helvetica, arial, sans-serif;
     color: grey;
@@ -82,13 +87,13 @@ html {
 */
 
 ::-moz-selection {
-    background: #3385FF;
+    background: var(--global-color-alpha);
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: #3385FF;
+    background: var(--global-color-alpha);
     color: white;
     text-shadow: none;
 }
@@ -122,19 +127,19 @@ h3 {
 
 h1 {
     font-size: 36px;
-    line-height: 48px;
+    line-height: var(--global-whitespace-xl);
     margin: 0 0 24px;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: var(--global-whitespace-lg);
     line-height: 40px;
     margin: 0 0 24px;
 }
 
 h3 {
     font-size: 26px;
-    line-height: 32px;
+    line-height: var(--global-whitespace-lg);
     margin: 0 0 24px;
 }
 
@@ -169,7 +174,7 @@ li ol {
 blockquote {
     font-style: normal;
     font-size: 23px;
-    line-height: 32px;
+    line-height: var(--global-whitespace-lg);
     margin: 0 0 24px;
 }
 
@@ -181,8 +186,8 @@ blockquote * {
 figcaption {
     font-weight: 400;
     font-size: 12px;
-    line-height: 16px;
-    margin-top: 8px;
+    line-height: var(--global-whitespace-md);
+    margin-top: var(--global-whitespace-sm);
 }
 
 hr {
@@ -193,7 +198,7 @@ hr {
 }
 
 a {
-    color: #3385FF ;
+    color:var(--global-color-alpha) ;
     transition: all .1s ease-in-out;
 }
 
@@ -236,19 +241,19 @@ input{
 /* size modifiers */
 
 .o-row--lg {
-    padding-top: 48px;
+    padding-top: var(--global-whitespace-xl);
     padding-bottom: 24px;
 }
 
 .o-row--xl {
     padding-top: 72px;
-    padding-bottom: 48px;
+    padding-bottom: var(--global-whitespace-xl);
 }
 
 @media (min-width: 768px) {
     .o-row {
-        padding-left: 48px;
-        padding-right: 48px;
+        padding-left: var(--global-whitespace-xl);
+        padding-right: var(--global-whitespace-xl);
     }
 }
 
@@ -289,7 +294,7 @@ input{
 @media (min-width: 768px) {
     .o-section--lg + .o-section--lg,
     .o-section--xl + .o-section--xl {
-        padding-top: 48px;
+        padding-top: var(--global-whitespace-xl);
     }
 }
 
@@ -345,11 +350,11 @@ input{
 }
 
 .o-layout--gutter-xl {
-    margin: 0 -48px;
+    margin: 0 -var(--global-whitespace-xl);
 }
 
 .o-layout--gutter-xl > .o-layout__item {
-    padding: 0 48px;
+    padding: 0 var(--global-whitespace-xl);
 }
 
 /* reverse horizontal row modifier */
@@ -494,7 +499,7 @@ input{
 }
 
 .c-logo__symbol-2{
-    fill: #3385FF;  
+    fill: var(--global-color-alpha);  
 }
 
 .c-logo__symbol-3{
@@ -514,7 +519,7 @@ input{
 
 .c-card__body{
 
-    padding: 12px 48px; 
+    padding: 12px var(--global-whitespace-xl); 
 
 }
 
@@ -525,7 +530,7 @@ input{
     align-items: center;
     font-size: 18px;
     font-weight: 500;
-    padding-top: 48px;
+    padding-top: var(--global-whitespace-xl);
     margin-top: 56px;
 
 }
@@ -552,7 +557,7 @@ input{
     
     }
     .c-card__title{
-        font-size: 16px;
+        font-size: var(--global-whitespace-md);
     }
 
 
@@ -587,7 +592,7 @@ input{
     border: 1px solid var(--global-color-neutral-xxxx-light);
     font-family: "Inter";
     color: var(--global-color-neutral-xxxx-dark);
-    font-size: 16px;
+    font-size: var(--global-whitespace-md);
     line-height: 24px;
     padding: 12px;
     -webkit-appearance: none;
@@ -598,8 +603,8 @@ input{
 .c-input:focus {
     outline: none;
     box-shadow: h-offset v-offset blur spread color;
-    box-shadow: 0 0 0 3px #3385ff4d; 
-    border: 1px solid #3385FF;
+    box-shadow: 0 0 0 3px var(--global-color-transparent); 
+    border: 1px solidvar(--global-color-alpha);
 }
 
 /*
@@ -610,7 +615,7 @@ input{
 
 .c-label {
     font-size: 14px;
-    line-height: 16px;
+    line-height: var(--global-whitespace-md);
     margin-bottom: 18px;
     color: var(--global-color-neutral-x-dark);
 }
@@ -618,7 +623,7 @@ input{
 .c-form-field--option .c-label{
 
     margin-bottom: 0;
-    margin-left: 8px;
+    margin-left: var(--global-whitespace-sm);
 
 }
 
@@ -640,11 +645,11 @@ input{
 .c-button {
     width: 100%;
     border-radius: 3px;
-    border: 1px solid #2E77E6;
+    border: 1px solid var(--global-color-alpha-dark);
     font-family: "Inter";
-    background-color: #3385FF;
+    background-color:var(--global-color-alpha);
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: var(--global-whitespace-md);
     line-height: 24px;
     padding: 12px;
     outline: none;
@@ -652,23 +657,23 @@ input{
 }
 
 .c-button:hover {
-    background-color: #4F95FF;
-    border: 1px solid #2E77E6;
+    background-color: var(--global-color-alpha-light);
+    border: 1px solidvar(--global-color-alpha-dark);
     outline: none;
 }
 
 .c-button:focus {
     
-    background-color: #3385FF;
-    border: 1px solid #2E77E6;
+    background-color:var(--global-color-alpha);
+    border: 1px solidvar(--global-color-alpha-dark);
     box-shadow: h-offset v-offset blur spread color;
-    box-shadow: 0 0 0 3px #3385ff4d; 
+    box-shadow: 0 0 0 3pxvar(--global-color-alpha)4d; 
     outline: none;
 }
 
 .c-button:active {
     background-color:#2E77E6;
-    border: 1px solid #2E77E6;
+    border: 1px solidvar(--global-color-alpha-dark);
     outline: none;
     
 }
@@ -739,15 +744,15 @@ input{
 }
 
 .u-mb-md {
-    margin-bottom: 16px !important;
+    margin-bottom: var(--global-whitespace-md) !important;
 }
 
 .u-mb-lg {
-    margin-bottom: 32px !important;
+    margin-bottom: var(--global-whitespace-lg) !important;
 }
 
 .u-mb-xl {
-    margin-bottom: 48px !important;
+    margin-bottom: var(--global-whitespace-xl) !important;
 }
 
 /*
