@@ -38,6 +38,12 @@ variables
     --global-color-neutral-xxx-dark: #35374D;
     --global-color-neutral-xxxx-dark: #20223A;
 
+    --global-fontsize-sm: 14px;
+    --global-fontsize-md: 16px;
+    --global-fontsize-lg: 18px;
+    --global-fontsize-xl: 20px;
+    --global-fontsize-xxl: 26px;
+
     --global-baseline: 8px; 
     --global-whitespace-xs: calc(var( --global-baseline) / 2); /* = 4px */
     --global-whitespace-sm: calc(var( --global-baseline) / 1); /* = 8px */
@@ -138,7 +144,7 @@ h2 {
 }
 
 h3 {
-    font-size: 26px;
+    font-size: var(--global-fontsize-xxl)
     line-height: var(--global-whitespace-lg);
     margin: 0 0 24px;
 }
@@ -146,7 +152,7 @@ h3 {
 h4,
 h5,
 h6 {
-    font-size: 20px;
+    font-size: var(--global-fontsize-xl)
     line-height: 24px;
     margin: 0 0 24px;
 }
@@ -528,7 +534,7 @@ input{
     width: 100%;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: var(--global-fontsize-lg)
     font-weight: 500;
     padding-top: var(--global-whitespace-xl);
     margin-top: 56px;
@@ -540,7 +546,7 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: var(--global-fontsize-sm)
     border-top: 1px solid var(--global-color-neutral-xxxx-light);
 
 }
@@ -553,7 +559,7 @@ input{
 
     .c-card__body{
         padding: 6px 24px;
-        font-size: 14px;
+        font-size: var(--global-fontsize-sm)
     
     }
     .c-card__title{
@@ -614,7 +620,7 @@ input{
 */
 
 .c-label {
-    font-size: 14px;
+    font-size: var(--global-fontsize-sm)
     line-height: var(--global-whitespace-md);
     margin-bottom: 18px;
     color: var(--global-color-neutral-x-dark);
@@ -713,7 +719,7 @@ input{
 }
 
 .u-smaller_text{
-    font-size: 14px;
+    font-size: var(--global-fontsize-sm)
 }
 
 .u-gray__text{
@@ -806,7 +812,7 @@ input{
 */
 
 .u-text-sm {
-    font-size: 14px;
+    font-size: var(--global-fontsize-sm)
 }
 
 /*
